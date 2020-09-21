@@ -26,6 +26,9 @@ struct ItemsMainView: View {
                 NavigationLink(destination: PotionDetailView()){
                     Text("Potions")
                 }
+                NavigationLink(destination: ProvisionsDetailView()){
+                    Text("Provisions")
+                }
             }.navigationBarTitle("Item Sections").listStyle(SidebarListStyle())
         }
     }

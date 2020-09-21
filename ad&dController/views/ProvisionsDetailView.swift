@@ -1,5 +1,5 @@
 //
-//  PotionDetailView.swift
+//  ProvisionsDetailView.swift
 //  ad&dController
 //
 //  Created by Matt Kimball on 9/21/20.
@@ -8,34 +8,33 @@
 
 import SwiftUI
 
-struct PotionDetailView: View {
+struct ProvisionsDetailView: View {
     var body: some View {
-        //Text("One")
         ScrollView{
-            ForEach(potionList, id: \.name){ potion in
+            ForEach(provisionList, id: \.name){ potion in
                 VStack{
                     HStack{
                         Text(potion.name).font(.largeTitle).bold()
                         Spacer()
                     }
                     HStack{
-                        Text(getPotionData(thePotion: potion, option: 0))
+                        Text(getProvData(thePotion: potion, option: 0))
                         Divider()
-                        Text(getPotionData(thePotion: potion, option: 1))
+                        Text(getProvData(thePotion: potion, option: 1))
                     }
-                    Text(getPotionData(thePotion: potion, option: 2))
+                    Text(getProvData(thePotion: potion, option: 2))
                     Spacer()
                     Divider()
                     Divider()
                 }
                 
             }.padding()
-        }.navigationBarTitle("Potions")
+        }.navigationBarTitle("Provisions")
     }
 }
 
-struct PotionDetailView_Previews: PreviewProvider {
+struct ProvisionsDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        PotionDetailView()
+        ProvisionsDetailView()
     }
 }

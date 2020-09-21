@@ -37,6 +37,7 @@
 		7B8F91D22519311400F2D6D8 /* NotesGeneralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8F91D12519311400F2D6D8 /* NotesGeneralView.swift */; };
 		7B8F91D72519311D00F2D6D8 /* NotesTimeKeeperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8F91D62519311D00F2D6D8 /* NotesTimeKeeperView.swift */; };
 		7B8F920025193E1800F2D6D8 /* PotionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8F91FF25193E1800F2D6D8 /* PotionDetailView.swift */; };
+		7B8F920E2519456000F2D6D8 /* ProvisionsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8F920D2519456000F2D6D8 /* ProvisionsDetailView.swift */; };
 		7BEAC69024D6632300827372 /* WorldMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEAC68F24D6632300827372 /* WorldMainView.swift */; };
 		7BEAC69224D663D200827372 /* WorldKrisselMapImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEAC69124D663D200827372 /* WorldKrisselMapImageView.swift */; };
 		7BEAC69524D66A8D00827372 /* EnemyMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEAC69424D66A8D00827372 /* EnemyMainView.swift */; };
@@ -97,6 +98,7 @@
 		7B8F91D12519311400F2D6D8 /* NotesGeneralView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesGeneralView.swift; sourceTree = "<group>"; };
 		7B8F91D62519311D00F2D6D8 /* NotesTimeKeeperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTimeKeeperView.swift; sourceTree = "<group>"; };
 		7B8F91FF25193E1800F2D6D8 /* PotionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PotionDetailView.swift; sourceTree = "<group>"; };
+		7B8F920D2519456000F2D6D8 /* ProvisionsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvisionsDetailView.swift; sourceTree = "<group>"; };
 		7BEAC68F24D6632300827372 /* WorldMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldMainView.swift; sourceTree = "<group>"; };
 		7BEAC69124D663D200827372 /* WorldKrisselMapImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldKrisselMapImageView.swift; sourceTree = "<group>"; };
 		7BEAC69424D66A8D00827372 /* EnemyMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnemyMainView.swift; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				7B61798A24D706A500F7F147 /* ItemsMainView.swift */,
+				7B8F920D2519456000F2D6D8 /* ProvisionsDetailView.swift */,
 				7B8F91FF25193E1800F2D6D8 /* PotionDetailView.swift */,
 				7B61798C24D7072600F7F147 /* ItemsDetailView.swift */,
 				7B61798E24D708A900F7F147 /* ArmorDetailView.swift */,
@@ -429,6 +432,7 @@
 				7B51385324C74D2200C14BEB /* CharacterNpcView.swift in Sources */,
 				7B8F91D72519311D00F2D6D8 /* NotesTimeKeeperView.swift in Sources */,
 				7B8ACE4F24C6099600164DDE /* NotesView.swift in Sources */,
+				7B8F920E2519456000F2D6D8 /* ProvisionsDetailView.swift in Sources */,
 				7B61798B24D706A500F7F147 /* ItemsMainView.swift in Sources */,
 				7BEAC69224D663D200827372 /* WorldKrisselMapImageView.swift in Sources */,
 				7B63E91E24C77116002CF787 /* WorldTimelineView.swift in Sources */,
@@ -617,7 +621,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "ad&dController/ad&dController.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 599;
+				CURRENT_PROJECT_VERSION = 603;
 				DEVELOPMENT_ASSET_PATHS = "\"ad&dController/Preview Content\"";
 				DEVELOPMENT_TEAM = DY4U4E2DGY;
 				ENABLE_PREVIEWS = YES;
@@ -643,7 +647,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "ad&dController/ad&dController.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 599;
+				CURRENT_PROJECT_VERSION = 603;
 				DEVELOPMENT_ASSET_PATHS = "\"ad&dController/Preview Content\"";
 				DEVELOPMENT_TEAM = DY4U4E2DGY;
 				ENABLE_PREVIEWS = YES;

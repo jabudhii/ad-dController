@@ -41,16 +41,32 @@ struct Potions{
     var weight: Int
     var desc: String
 }
+struct Provisions{
+    var name: String
+    var cost: [Int]
+    var weight: Int
+    var desc: String
+}
 
 let armorList: [Armors] = [ArmBandedmail, ArmBrigandine, ArmBronzeplate, ArmChainmail, ARmFieldplate, ArmFullplate, ArmGreatHelm, ArmBasinet, ArmHide, ArmLeather, ArmPadded, ArmPlatemail, ArmRingmail, ArmScalemail, ArmSplintmail, ArmStudLeather]
-
-
+let potionList: [Potions] = [PotHealingW, PotHealingO, PotHealingM, PotHealingE, PotLongevity]
+let provisionList: [Provisions] = [ProStanRation, ProIronRation, ProAle]
 
 let itemTypeList: [String] = ["Clothing", "Daily Food and Lodging", "Tack and Harness", "Misc", "Chesshire Tools", "Auroran Tools", "Magic Ring", "Wand"]
 
 
 
-
+func getValue(itemCost: [Int]) -> String{
+    var returner = ""
+    let theCost = itemCost
+    let coin = ["Platinum", "Gold", "Electrum", "Silver", "Copper"]
+    for i in 0 ..< 5{
+        if theCost[i] != 0{
+            returner = String(theCost[i]) + " " + coin[i]
+        }
+    }
+    return returner
+}
 
 // Copper, Silver, Ethereum, Gold, Platinum, but in reverse
 
@@ -74,7 +90,7 @@ let ArmStudLeather = Armors(name:"Studded Leather", cost: [0,20,0,0,0], weight: 
 func getArmorData(theArmor: Armors, option: Int) -> String{
     switch (option){
     case 0:
-        return "Cost: " + String(theArmor.cost[1]) + " GP"
+        return "Cost: " + getValue(itemCost: theArmor.cost)
     case 1:
         return "Weight: " + String(theArmor.weight)
     case 2:
@@ -87,9 +103,6 @@ func getArmorData(theArmor: Armors, option: Int) -> String{
 }
 
 
-
-let potionList: [Potions] = [PotHealingW, PotHealingO, PotHealingM, PotHealingE, PotLongevity]
-
 let PotHealingW = Potions(name: "Weak Healing Potion", cost: [0,250,0,0,0], weight: 1, desc: "A weak healing potion, heals for 1d4 health")
 let PotHealingO = Potions(name: "Orthal Healing Potion", cost: [0,325,0,0,0], weight: 1, desc: "An orthal healing potion, heals for 1d8 health")
 let PotHealingM = Potions(name: "Healing Potion", cost: [0,400,0,0,0], weight: 1, desc: "A moderate healing potion, heals for 2d4+2 health")
@@ -99,7 +112,7 @@ let PotLongevity = Potions(name: "Longevity Potion", cost: [0,1000,0,0,0], weigh
 func getPotionData(thePotion: Potions, option: Int) -> String{
     switch (option){
     case 0:
-        return "Cost: " + String(thePotion.cost[1]) + " GP"
+        return "Cost: " + getValue(itemCost: thePotion.cost)
     case 1:
         return "Weight: " + String(thePotion.weight)
     case 2:
@@ -108,3 +121,23 @@ func getPotionData(thePotion: Potions, option: Int) -> String{
         return String("No valid option selected")
     }
 }
+
+
+let ProIronRation = Provisions(name: "Iron Ration", cost: [0,5,0,0,0], weight: 1, desc: "Bad tasting but non-rotting food for adventureres, lasts a week each")
+let ProStanRation = Provisions(name: "Standard Ration", cost: [0,3,0,0,0], weight: 1, desc: "Decent tasting food for adventureres, lasts a week each")
+let ProAle = Provisions(name: "Ale (Pint)", cost: [0,0,0,3,0], weight: 1, desc: "1 pint of light ale")
+
+func getProvData(thePotion: Provisions, option: Int) -> String{
+    switch (option){
+    case 0:
+        return "Cost: " + getValue(itemCost: thePotion.cost)
+    case 1:
+        return "Weight: " + String(thePotion.weight)
+    case 2:
+        return"Description: " + String(thePotion.desc)
+    default:
+        return String("No valid option selected")
+    }
+}
+
+
