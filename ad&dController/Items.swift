@@ -35,18 +35,24 @@ struct Armors{
     var desc: String
     var ac: Int
 }
+struct Potions{
+    var name: String
+    var cost: [Int]
+    var weight: Int
+    var desc: String
+}
 
 let armorList: [Armors] = [ArmBandedmail, ArmBrigandine, ArmBronzeplate, ArmChainmail, ARmFieldplate, ArmFullplate, ArmGreatHelm, ArmBasinet, ArmHide, ArmLeather, ArmPadded, ArmPlatemail, ArmRingmail, ArmScalemail, ArmSplintmail, ArmStudLeather]
 
 
 
-let itemTypeList: [String] = ["Clothing", "Daily Food and Lodging", "Tack and Harness", "Misc", "Chesshire Tools", "Auroran Tools"]
+let itemTypeList: [String] = ["Clothing", "Daily Food and Lodging", "Tack and Harness", "Misc", "Chesshire Tools", "Auroran Tools", "Magic Ring", "Wand"]
 
 
 
 
 
-
+// Copper, Silver, Ethereum, Gold, Platinum, but in reverse
 
 let ArmBandedmail = Armors(name:"Banded Mail", cost: [0,200,0,0,0], weight: 35, desc: "overlapping stripes of metal sewn to a backing of leather and chainmail", ac: 4)
 let ArmBrigandine = Armors(name:"Brigandine", cost: [0,120,0,0,0], weight: 35, desc: "small metal pleastes sewn to a layer of canvas, wreapped in cloth", ac: 7)
@@ -75,6 +81,29 @@ func getArmorData(theArmor: Armors, option: Int) -> String{
         return"Armor Class Rating: " + String(theArmor.ac)
     case 3:
         return theArmor.desc
+    default:
+        return String("No valid option selected")
+    }
+}
+
+
+
+let potionList: [Potions] = [PotHealingW, PotHealingO, PotHealingM, PotHealingE, PotLongevity]
+
+let PotHealingW = Potions(name: "Weak Healing Potion", cost: [0,250,0,0,0], weight: 1, desc: "A weak healing potion, heals for 1d4 health")
+let PotHealingO = Potions(name: "Orthal Healing Potion", cost: [0,325,0,0,0], weight: 1, desc: "An orthal healing potion, heals for 1d8 health")
+let PotHealingM = Potions(name: "Healing Potion", cost: [0,400,0,0,0], weight: 1, desc: "A moderate healing potion, heals for 2d4+2 health")
+let PotHealingE = Potions(name: "Extra Healing Potion", cost: [0,800,0,0,0], weight: 1, desc: "An extra healing potion, heals for 3d8+3 health, or 1d8 for 1/3 drink")
+let PotLongevity = Potions(name: "Longevity Potion", cost: [0,1000,0,0,0], weight: 1, desc: "An extra healing potion, heals for 3d8+3 health, or 1d8 for 1/3 drink")
+
+func getPotionData(thePotion: Potions, option: Int) -> String{
+    switch (option){
+    case 0:
+        return "Cost: " + String(thePotion.cost[1]) + " GP"
+    case 1:
+        return "Weight: " + String(thePotion.weight)
+    case 2:
+        return"Description: " + String(thePotion.desc)
     default:
         return String("No valid option selected")
     }

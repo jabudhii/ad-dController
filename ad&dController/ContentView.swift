@@ -7,9 +7,15 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct ContentView: View {
     @State private var selection = 3
+    
+    // Core Data for DayKeeper
+    @FetchRequest(entity: DayKeeper.entity(), sortDescriptors: []) var dayTracker: FetchedResults<DayKeeper>
+    @State var dayNum:[NSManagedObject] = []
+    
     var body: some View {
         TabView(selection: $selection){
             CharacterView()

@@ -1,5 +1,5 @@
 //
-//  NotesViewOptionSet.swift
+//  NotesGeneralView.swift
 //  ad&dController
 //
 //  Created by Matt Kimball on 9/21/20.
@@ -8,22 +8,14 @@
 
 import SwiftUI
 
-
-
-
-
-
-
-
-
-struct NotesViewOptionSet: View {
+struct NotesGeneralView: View {
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
-struct NotesViewOptionSet_Previews: PreviewProvider {
+struct NotesGeneralView_Previews: PreviewProvider {
     static var previews: some View {
-        NotesViewOptionSet()
+        NotesGeneralView()
     }
 }

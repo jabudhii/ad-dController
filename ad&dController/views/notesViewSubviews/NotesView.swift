@@ -12,13 +12,13 @@ struct NotesView: View {
     var body: some View {
         NavigationView{
             List{
-                NavigationLink(destination: WorldTimelineView()){
-                    Text("World Timeline")
+                NavigationLink(destination: NotesGeneralView()){
+                    Text("General")
                 }
-                NavigationLink(destination: WorldKrisselMapImageView()){
-                    Text("Krissel Maps")
+                NavigationLink(destination: NotesTimeKeeperView()){
+                    Text("Time Keeper")
                 }
-            }.navigationBarTitle("World Data").listStyle(SidebarListStyle())
+            }.navigationBarTitle("Notes").listStyle(SidebarListStyle())
         }
     }
 }
