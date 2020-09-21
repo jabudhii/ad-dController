@@ -12,12 +12,14 @@ struct NotesView: View {
     var body: some View {
         NavigationView{
             List{
-                ForEach(adndWorldOneFactions, id: \.name) { adndWorldOneFactions in
-                    CharacterMainListRows(option: adndWorldOneFactions)
+                NavigationLink(destination: WorldTimelineView()){
+                    Text("World Timeline")
                 }
-            }.navigationBarTitle(Text("Factions")).listStyle(SidebarListStyle())
-        }  // End NavigationView
-            //.font(.title)
+                NavigationLink(destination: WorldKrisselMapImageView()){
+                    Text("Krissel Maps")
+                }
+            }.navigationBarTitle("World Data").listStyle(SidebarListStyle())
+        }
     }
 }
 
