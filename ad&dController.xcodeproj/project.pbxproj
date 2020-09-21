@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B51385124C74D1200C14BEB /* CharacterPartyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B51385024C74D1200C14BEB /* CharacterPartyView.swift */; };
+		7B51385324C74D2200C14BEB /* CharacterNpcView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B51385224C74D2200C14BEB /* CharacterNpcView.swift */; };
+		7B51385724C74E3700C14BEB /* CharacterMainListRows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B51385624C74E3700C14BEB /* CharacterMainListRows.swift */; };
+		7B51385B24C74EF500C14BEB /* CharcterFactionsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B51385A24C74EF500C14BEB /* CharcterFactionsData.swift */; };
 		7B53CEA72465AFDC00EF2176 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B53CEA62465AFDC00EF2176 /* AppDelegate.swift */; };
 		7B53CEA92465AFDC00EF2176 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B53CEA82465AFDC00EF2176 /* SceneDelegate.swift */; };
 		7B53CEAC2465AFDC00EF2176 /* ad_dController.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7B53CEAA2465AFDC00EF2176 /* ad_dController.xcdatamodeld */; };
@@ -16,6 +20,24 @@
 		7B53CEB62465AFDF00EF2176 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B53CEB42465AFDF00EF2176 /* LaunchScreen.storyboard */; };
 		7B53CEC12465AFDF00EF2176 /* ad_dControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B53CEC02465AFDF00EF2176 /* ad_dControllerTests.swift */; };
 		7B53CECC2465AFDF00EF2176 /* ad_dControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B53CECB2465AFDF00EF2176 /* ad_dControllerUITests.swift */; };
+		7B53CEDA2465B28D00EF2176 /* Characters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B53CED92465B28D00EF2176 /* Characters.swift */; };
+		7B53CEDC2465B29600EF2176 /* Enemies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B53CEDB2465B29600EF2176 /* Enemies.swift */; };
+		7B53CEDE2465B2A100EF2176 /* Weapons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B53CEDD2465B2A100EF2176 /* Weapons.swift */; };
+		7B53CEE02465B71100EF2176 /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B53CEDF2465B71100EF2176 /* Items.swift */; };
+		7B5B350D246D024B007D8879 /* Combat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5B350C246D024B007D8879 /* Combat.swift */; };
+		7B5D2D9A246995EF0051B584 /* CombatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5D2D99246995EF0051B584 /* CombatView.swift */; };
+		7B5D2D9C246998FE0051B584 /* CharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5D2D9B246998FE0051B584 /* CharacterView.swift */; };
+		7B61798B24D706A500F7F147 /* ItemsMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B61798A24D706A500F7F147 /* ItemsMainView.swift */; };
+		7B61798D24D7072600F7F147 /* ItemsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B61798C24D7072600F7F147 /* ItemsDetailView.swift */; };
+		7B61798F24D708A900F7F147 /* ArmorDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B61798E24D708A900F7F147 /* ArmorDetailView.swift */; };
+		7B61799124D708B000F7F147 /* WeaponDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B61799024D708B000F7F147 /* WeaponDetailView.swift */; };
+		7B63E91E24C77116002CF787 /* WorldTimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B63E91D24C77116002CF787 /* WorldTimelineView.swift */; };
+		7B63E92024C79003002CF787 /* CharacterGenerationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B63E91F24C79003002CF787 /* CharacterGenerationView.swift */; };
+		7B8ACE4F24C6099600164DDE /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8ACE4E24C6099600164DDE /* NotesView.swift */; };
+		7B8F91BC251927A400F2D6D8 /* notesViewOptionSets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8F91BB251927A400F2D6D8 /* notesViewOptionSets.swift */; };
+		7BEAC69024D6632300827372 /* WorldMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEAC68F24D6632300827372 /* WorldMainView.swift */; };
+		7BEAC69224D663D200827372 /* WorldKrisselMapImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEAC69124D663D200827372 /* WorldKrisselMapImageView.swift */; };
+		7BEAC69524D66A8D00827372 /* EnemyMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEAC69424D66A8D00827372 /* EnemyMainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +58,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7B46775A2465D05B00435D27 /* ad&dController.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "ad&dController.entitlements"; sourceTree = "<group>"; };
+		7B51385024C74D1200C14BEB /* CharacterPartyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterPartyView.swift; sourceTree = "<group>"; };
+		7B51385224C74D2200C14BEB /* CharacterNpcView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterNpcView.swift; sourceTree = "<group>"; };
+		7B51385624C74E3700C14BEB /* CharacterMainListRows.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterMainListRows.swift; sourceTree = "<group>"; };
+		7B51385A24C74EF500C14BEB /* CharcterFactionsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharcterFactionsData.swift; sourceTree = "<group>"; };
 		7B53CEA32465AFDC00EF2176 /* ad&dController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ad&dController.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B53CEA62465AFDC00EF2176 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B53CEA82465AFDC00EF2176 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +78,24 @@
 		7B53CEC72465AFDF00EF2176 /* ad&dControllerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ad&dControllerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B53CECB2465AFDF00EF2176 /* ad_dControllerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ad_dControllerUITests.swift; sourceTree = "<group>"; };
 		7B53CECD2465AFDF00EF2176 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B53CED92465B28D00EF2176 /* Characters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Characters.swift; sourceTree = "<group>"; };
+		7B53CEDB2465B29600EF2176 /* Enemies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enemies.swift; sourceTree = "<group>"; };
+		7B53CEDD2465B2A100EF2176 /* Weapons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weapons.swift; sourceTree = "<group>"; };
+		7B53CEDF2465B71100EF2176 /* Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
+		7B5B350C246D024B007D8879 /* Combat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Combat.swift; sourceTree = "<group>"; };
+		7B5D2D99246995EF0051B584 /* CombatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombatView.swift; sourceTree = "<group>"; };
+		7B5D2D9B246998FE0051B584 /* CharacterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterView.swift; sourceTree = "<group>"; };
+		7B61798A24D706A500F7F147 /* ItemsMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsMainView.swift; sourceTree = "<group>"; };
+		7B61798C24D7072600F7F147 /* ItemsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsDetailView.swift; sourceTree = "<group>"; };
+		7B61798E24D708A900F7F147 /* ArmorDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmorDetailView.swift; sourceTree = "<group>"; };
+		7B61799024D708B000F7F147 /* WeaponDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponDetailView.swift; sourceTree = "<group>"; };
+		7B63E91D24C77116002CF787 /* WorldTimelineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldTimelineView.swift; sourceTree = "<group>"; };
+		7B63E91F24C79003002CF787 /* CharacterGenerationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterGenerationView.swift; sourceTree = "<group>"; };
+		7B8ACE4E24C6099600164DDE /* NotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesView.swift; sourceTree = "<group>"; };
+		7B8F91BB251927A400F2D6D8 /* notesViewOptionSets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = notesViewOptionSets.swift; sourceTree = "<group>"; };
+		7BEAC68F24D6632300827372 /* WorldMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldMainView.swift; sourceTree = "<group>"; };
+		7BEAC69124D663D200827372 /* WorldKrisselMapImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldKrisselMapImageView.swift; sourceTree = "<group>"; };
+		7BEAC69424D66A8D00827372 /* EnemyMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnemyMainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +123,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7B51384F24C74CE800C14BEB /* characterViewSubviews */ = {
+			isa = PBXGroup;
+			children = (
+				7B5D2D9B246998FE0051B584 /* CharacterView.swift */,
+				7B63E91F24C79003002CF787 /* CharacterGenerationView.swift */,
+				7B51385024C74D1200C14BEB /* CharacterPartyView.swift */,
+				7B51385224C74D2200C14BEB /* CharacterNpcView.swift */,
+				7B51385624C74E3700C14BEB /* CharacterMainListRows.swift */,
+				7B51385A24C74EF500C14BEB /* CharcterFactionsData.swift */,
+			);
+			name = characterViewSubviews;
+			sourceTree = "<group>";
+		};
 		7B53CE9A2465AFDC00EF2176 = {
 			isa = PBXGroup;
 			children = (
@@ -101,13 +159,10 @@
 		7B53CEA52465AFDC00EF2176 /* ad&dController */ = {
 			isa = PBXGroup;
 			children = (
-				7B53CEA62465AFDC00EF2176 /* AppDelegate.swift */,
-				7B53CEA82465AFDC00EF2176 /* SceneDelegate.swift */,
-				7B53CEAD2465AFDC00EF2176 /* ContentView.swift */,
-				7B53CEAF2465AFDF00EF2176 /* Assets.xcassets */,
-				7B53CEB42465AFDF00EF2176 /* LaunchScreen.storyboard */,
-				7B53CEB72465AFDF00EF2176 /* Info.plist */,
-				7B53CEAA2465AFDC00EF2176 /* ad_dController.xcdatamodeld */,
+				7B46775A2465D05B00435D27 /* ad&dController.entitlements */,
+				7B8ACE5324C613A100164DDE /* assets */,
+				7B8ACE5224C6139000164DDE /* dataFiles */,
+				7B8ACE5124C6137D00164DDE /* views */,
 				7B53CEB12465AFDF00EF2176 /* Preview Content */,
 			);
 			path = "ad&dController";
@@ -139,6 +194,75 @@
 			path = "ad&dControllerUITests";
 			sourceTree = "<group>";
 		};
+		7B61799224D708D900F7F147 /* itemViewSubviews */ = {
+			isa = PBXGroup;
+			children = (
+				7B61798A24D706A500F7F147 /* ItemsMainView.swift */,
+				7B61798C24D7072600F7F147 /* ItemsDetailView.swift */,
+				7B61798E24D708A900F7F147 /* ArmorDetailView.swift */,
+				7B61799024D708B000F7F147 /* WeaponDetailView.swift */,
+			);
+			name = itemViewSubviews;
+			sourceTree = "<group>";
+		};
+		7B8ACE5124C6137D00164DDE /* views */ = {
+			isa = PBXGroup;
+			children = (
+				7BEAC69324D6663B00827372 /* worldViewSubviews */,
+				7B51384F24C74CE800C14BEB /* characterViewSubviews */,
+				7B5D2D99246995EF0051B584 /* CombatView.swift */,
+				7B8F91BA251925E200F2D6D8 /* notesViewSubviews */,
+				7B61799224D708D900F7F147 /* itemViewSubviews */,
+				7BEAC69424D66A8D00827372 /* EnemyMainView.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		7B8ACE5224C6139000164DDE /* dataFiles */ = {
+			isa = PBXGroup;
+			children = (
+				7B5B350C246D024B007D8879 /* Combat.swift */,
+				7B53CED92465B28D00EF2176 /* Characters.swift */,
+				7B53CEDB2465B29600EF2176 /* Enemies.swift */,
+				7B53CEDD2465B2A100EF2176 /* Weapons.swift */,
+				7B53CEDF2465B71100EF2176 /* Items.swift */,
+			);
+			name = dataFiles;
+			sourceTree = "<group>";
+		};
+		7B8ACE5324C613A100164DDE /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				7B53CEA62465AFDC00EF2176 /* AppDelegate.swift */,
+				7B53CEA82465AFDC00EF2176 /* SceneDelegate.swift */,
+				7B53CEAD2465AFDC00EF2176 /* ContentView.swift */,
+				7B53CEAF2465AFDF00EF2176 /* Assets.xcassets */,
+				7B53CEB42465AFDF00EF2176 /* LaunchScreen.storyboard */,
+				7B53CEB72465AFDF00EF2176 /* Info.plist */,
+				7B53CEAA2465AFDC00EF2176 /* ad_dController.xcdatamodeld */,
+			);
+			name = assets;
+			sourceTree = "<group>";
+		};
+		7B8F91BA251925E200F2D6D8 /* notesViewSubviews */ = {
+			isa = PBXGroup;
+			children = (
+				7B8ACE4E24C6099600164DDE /* NotesView.swift */,
+				7B8F91BB251927A400F2D6D8 /* notesViewOptionSets.swift */,
+			);
+			path = notesViewSubviews;
+			sourceTree = "<group>";
+		};
+		7BEAC69324D6663B00827372 /* worldViewSubviews */ = {
+			isa = PBXGroup;
+			children = (
+				7BEAC68F24D6632300827372 /* WorldMainView.swift */,
+				7BEAC69124D663D200827372 /* WorldKrisselMapImageView.swift */,
+				7B63E91D24C77116002CF787 /* WorldTimelineView.swift */,
+			);
+			name = worldViewSubviews;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -149,6 +273,7 @@
 				7B53CE9F2465AFDC00EF2176 /* Sources */,
 				7B53CEA02465AFDC00EF2176 /* Frameworks */,
 				7B53CEA12465AFDC00EF2176 /* Resources */,
+				7B8ACE5024C60E6500164DDE /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -202,7 +327,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = matthewKimball;
 				TargetAttributes = {
 					7B53CEA22465AFDC00EF2176 = {
@@ -265,15 +390,57 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7B8ACE5024C60E6500164DDE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "agvtool next-version -all\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7B53CE9F2465AFDC00EF2176 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B53CEE02465B71100EF2176 /* Items.swift in Sources */,
+				7BEAC69024D6632300827372 /* WorldMainView.swift in Sources */,
 				7B53CEA72465AFDC00EF2176 /* AppDelegate.swift in Sources */,
+				7B51385B24C74EF500C14BEB /* CharcterFactionsData.swift in Sources */,
+				7B8F91BC251927A400F2D6D8 /* notesViewOptionSets.swift in Sources */,
+				7B51385324C74D2200C14BEB /* CharacterNpcView.swift in Sources */,
+				7B8ACE4F24C6099600164DDE /* NotesView.swift in Sources */,
+				7B61798B24D706A500F7F147 /* ItemsMainView.swift in Sources */,
+				7BEAC69224D663D200827372 /* WorldKrisselMapImageView.swift in Sources */,
+				7B63E91E24C77116002CF787 /* WorldTimelineView.swift in Sources */,
+				7B61799124D708B000F7F147 /* WeaponDetailView.swift in Sources */,
+				7B63E92024C79003002CF787 /* CharacterGenerationView.swift in Sources */,
+				7B5D2D9C246998FE0051B584 /* CharacterView.swift in Sources */,
+				7B61798D24D7072600F7F147 /* ItemsDetailView.swift in Sources */,
+				7B51385724C74E3700C14BEB /* CharacterMainListRows.swift in Sources */,
 				7B53CEAC2465AFDC00EF2176 /* ad_dController.xcdatamodeld in Sources */,
+				7B53CEDE2465B2A100EF2176 /* Weapons.swift in Sources */,
 				7B53CEAE2465AFDC00EF2176 /* ContentView.swift in Sources */,
+				7B51385124C74D1200C14BEB /* CharacterPartyView.swift in Sources */,
 				7B53CEA92465AFDC00EF2176 /* SceneDelegate.swift in Sources */,
+				7B5D2D9A246995EF0051B584 /* CombatView.swift in Sources */,
+				7B53CEDC2465B29600EF2176 /* Enemies.swift in Sources */,
+				7B5B350D246D024B007D8879 /* Combat.swift in Sources */,
+				7BEAC69524D66A8D00827372 /* EnemyMainView.swift in Sources */,
+				7B53CEDA2465B28D00EF2176 /* Characters.swift in Sources */,
+				7B61798F24D708A900F7F147 /* ArmorDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +513,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -406,6 +574,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -438,17 +607,23 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "ad&dController/ad&dController.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 585;
 				DEVELOPMENT_ASSET_PATHS = "\"ad&dController/Preview Content\"";
 				DEVELOPMENT_TEAM = DY4U4E2DGY;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "ad&dController/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.matthewkimball.ad-dController";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -458,17 +633,23 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "ad&dController/ad&dController.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 585;
 				DEVELOPMENT_ASSET_PATHS = "\"ad&dController/Preview Content\"";
 				DEVELOPMENT_TEAM = DY4U4E2DGY;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "ad&dController/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.matthewkimball.ad-dController";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

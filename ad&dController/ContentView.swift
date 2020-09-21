@@ -9,34 +9,51 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var selection = 0
- 
+    @State private var selection = 3
     var body: some View {
         TabView(selection: $selection){
-            Text("First View")
-                .font(.title)
-                .tabItem {
-                    VStack {
-                        Image("first")
-                        Text("First")
-                    }
-                }
+            CharacterView()
+                .tabItem {Text("Characters")}
                 .tag(0)
-            Text("Second View")
+
+
+            EnemyMainView()
                 .font(.title)
-                .tabItem {
-                    VStack {
-                        Image("second")
-                        Text("Second")
-                    }
-                }
-                .tag(1)
-        }
-    }
-}
+            .tabItem {Text("Enemies")}
+            .tag(1)
+            
+            
+            
+            ItemsMainView()
+            .font(.title)
+            .tabItem {Text("Items")}
+            .tag(2)
+            
+            
+            
+            CombatView()
+            .tabItem {Text("Combat")}
+            .tag(3)
+            
+            
+            
+            NotesView()
+            .font(.title)
+            .tabItem {Text("Notes")}
+            .tag(4)
+            
+            
+            
+            WorldMainView()
+            .font(.title)
+            .tabItem {Text("World")}
+            .tag(5)
+        }  // End of TabView
+    }  // End of Body
+}  // End of Content View
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-    }
-}
+    }  // End of previews
+}  // End of ContentView_Previews
