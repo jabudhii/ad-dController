@@ -106,8 +106,8 @@ func getArmorData(theArmor: Armors, option: Int) -> String{
 let PotHealingW = Potions(name: "Weak Healing Potion", cost: [0,250,0,0,0], weight: 1, desc: "A weak healing potion, heals for 1d4 health")
 let PotHealingO = Potions(name: "Orthal Healing Potion", cost: [0,325,0,0,0], weight: 1, desc: "An orthal healing potion, heals for 1d8 health")
 let PotHealingM = Potions(name: "Healing Potion", cost: [0,400,0,0,0], weight: 1, desc: "A moderate healing potion, heals for 2d4+2 health")
-let PotHealingE = Potions(name: "Extra Healing Potion", cost: [0,800,0,0,0], weight: 1, desc: "An extra healing potion, heals for 3d8+3 health, or 1d8 for 1/3 drink")
-let PotLongevity = Potions(name: "Longevity Potion", cost: [0,1000,0,0,0], weight: 1, desc: "An extra healing potion, heals for 3d8+3 health, or 1d8 for 1/3 drink")
+let PotHealingE = Potions(name: "Extra Healing Potion", cost: [0,800,0,0,0], weight: 1, desc: "An extra healing potion, heals for 3d8+3 health, 1d8 for 1/3 drink")
+let PotLongevity = Potions(name: "Longevity Potion", cost: [0,1000,0,0,0], weight: 1, desc: "Reduce age 1-12 years. 1% cumulative undo prev, Entire potion")
 
 func getPotionData(thePotion: Potions, option: Int) -> String{
     switch (option){
@@ -116,7 +116,7 @@ func getPotionData(thePotion: Potions, option: Int) -> String{
     case 1:
         return "Weight: " + String(thePotion.weight)
     case 2:
-        return"Description: " + String(thePotion.desc)
+        return String(thePotion.desc)
     default:
         return String("No valid option selected")
     }
@@ -134,7 +134,7 @@ func getProvData(thePotion: Provisions, option: Int) -> String{
     case 1:
         return "Weight: " + String(thePotion.weight)
     case 2:
-        return"Description: " + String(thePotion.desc)
+        return String(thePotion.desc)
     default:
         return String("No valid option selected")
     }
