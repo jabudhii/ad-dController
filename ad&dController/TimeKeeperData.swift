@@ -22,3 +22,6 @@ func getDayCounterData(withName name: String) -> [Int]?
 
 var dayCounterMaster = getDayCounterData(withName: "dayCounterData")
 // 0-barryDeath, 1-totalGameDays, 2-daysBeforeSplit, 3-daysBeforeWorldCover, 4-daysBeforeAbyss
+
+
+let dayCounterText = ["Days since Barry was killed.", "Days since the Main Party first met.", "Days until the inner sphere seperates.", "Days until the anomaly storm covers the world.", "Days until the tear to another plane."]
