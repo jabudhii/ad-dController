@@ -53,7 +53,7 @@ struct NotesTimeKeeperView: View {
                 Text(dayCounterText[1]).foregroundColor(.black)
             }.padding().background(Color.green.opacity(0.2)).cornerRadius(10)  // END BOTTOM
             Spacer()
-            Text(String(mThingNames.count) + " First names")
+            Text(String(firstNamesArrayData.count) + " First names")
             Spacer()
             Button("Increment Day"){
                 

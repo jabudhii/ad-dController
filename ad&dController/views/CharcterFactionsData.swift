@@ -37,9 +37,9 @@ let adndWorldOneFactions: [theFactionCharacter] = [
     partyList),
     // -- Traveler Series Factions
     theFactionCharacter(setName: "Desmond's Faction", setImage: Image("Desmond_BaseIcon"),setMembers: desmondFactionMembers),
-    theFactionCharacter(setName: "Halmier's Faction", setImage: Image(systemName: "photo"),setMembers:
+    theFactionCharacter(setName: "The Harbingers of the Dawn", setImage: Image(systemName: "photo"),setMembers:
     halmierFactionMembers),
-    theFactionCharacter(setName: "Neutral Traveller Faction", setImage: Image(systemName: "photo"),setMembers:mainNeutralFactionMembers)
+    theFactionCharacter(setName: "Neutral Traveler Faction", setImage: Image(systemName: "photo"),setMembers:mainNeutralFactionMembers)
     
     // -- Town Factions
     

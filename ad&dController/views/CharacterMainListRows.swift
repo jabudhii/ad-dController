@@ -16,23 +16,32 @@ struct CharacterMainListRows: View {
                             VStack{
                                 HStack{
                                     Spacer()
-                                    Text("Alive").foregroundColor(Color.blue).bold()
-                                    Text("Dead").foregroundColor(Color.red).bold()
+                                    HStack{
+                                        Text("Alive").foregroundColor(Color.blue).bold()
+                                        Text("Dead").foregroundColor(Color.red).bold()
+                                    }
+                                    Spacer()
+                                    HStack{
+                                        Text("Traveler").foregroundColor(Color.purple).bold()
+                                        Text("Standard").foregroundColor(Color.green).bold()
+                                    }
                                     Spacer()
                                 }
                                 Spacer()
                                 ForEach(0 ..< option.members.count){ char in
-                                    VStack{
-                                        HStack{
-                                            Text(self.option.members[char].name).bold().foregroundColor(determineLifeNameColor(alive: self.option.members[char].isAlive))
-                                            Text("|")
-                                            Text(self.option.members[char].player).bold()
-                                            Spacer()
-                                            Text(self.option.members[char].charClass)
+                                    NavigationLink(destination: CharacterInfoView(selectedChar: self.option.members[char])){
+                                        VStack{
+                                            HStack{
+                                                Text(self.option.members[char].name).bold().foregroundColor(determineLifeNameColor(alive: self.option.members[char].isAlive))
+                                                Text("|")
+                                                Text(self.option.members[char].player).bold()
+                                                Spacer()
+                                                Text(self.option.members[char].charClass).foregroundColor(determineTravellerColor(travy: self.option.members[char].traveller))
+                                            }
+                                            Text(self.option.members[char].notes)
+                                            Divider()
                                         }
-                                        Text(self.option.members[char].notes)
-                                        Divider()
-                                    }
+                                    }.buttonStyle(PlainButtonStyle())
                                 }
                             }.padding()
                         }.navigationTitle(option.name)
@@ -59,6 +68,15 @@ func determineLifeNameColor(alive: Bool) -> Color{
     }
     else{
         return Color.blue
+    }
+}
+
+func determineTravellerColor(travy: Bool) -> Color{
+    if !travy{
+        return Color.green
+    }
+    else{
+        return Color.purple
     }
 }
 
