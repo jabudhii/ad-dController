@@ -55,7 +55,7 @@ struct CharacterInfoView: View {
                 HStack{
                     Text("Description").bold()
                     Spacer()
-                    Text(selectedChar.notes)
+                    Text(selectedChar.detail)
                 }
             }.padding()
         }.navigationTitle(selectedChar.name)  // End of ScrollView
