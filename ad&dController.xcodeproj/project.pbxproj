@@ -629,7 +629,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "ad&dController/ad&dController.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 612;
+				CURRENT_PROJECT_VERSION = 617;
 				DEVELOPMENT_ASSET_PATHS = "\"ad&dController/Preview Content\"";
 				DEVELOPMENT_TEAM = DY4U4E2DGY;
 				ENABLE_PREVIEWS = YES;
@@ -655,7 +655,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "ad&dController/ad&dController.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 612;
+				CURRENT_PROJECT_VERSION = 617;
 				DEVELOPMENT_ASSET_PATHS = "\"ad&dController/Preview Content\"";
 				DEVELOPMENT_TEAM = DY4U4E2DGY;
 				ENABLE_PREVIEWS = YES;

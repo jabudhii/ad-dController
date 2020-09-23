@@ -9,17 +9,27 @@
 import SwiftUI
 
 struct WorldKrisselMapImageView: View {
+    let corna: CGFloat = 25
     var body: some View {
         ScrollView{
             VStack{
                 Text("Krissel Region Map")
-                Image("KrisselRegion").resizable().aspectRatio(contentMode: .fit)
+                Image("KrisselRegion").resizable().aspectRatio(contentMode: .fit).cornerRadius(corna)
+                    .overlay(RoundedRectangle(cornerRadius: corna)
+                                .stroke(Color.black, lineWidth: 4))
+                            .shadow(radius: corna)
                 Divider()
                 Text("World Map")
-                Image("KorrodanWorldMap").resizable().aspectRatio(contentMode: .fit)
+                Image("KorrodanWorldMap").resizable().aspectRatio(contentMode: .fit).cornerRadius(corna)
+                    .overlay(RoundedRectangle(cornerRadius: corna)
+                                .stroke(Color.black, lineWidth: 4))
+                            .shadow(radius: corna)
                 Divider()
                 Text("RiverGuard Midway")
-                Image("RiverGuard_Midway").resizable().aspectRatio(contentMode: .fit)
+                Image("RiverGuard_Midway").resizable().aspectRatio(contentMode: .fit).cornerRadius(corna)
+                    .overlay(RoundedRectangle(cornerRadius: corna)
+                                .stroke(Color.black, lineWidth: 4))
+                            .shadow(radius: corna)
             }.padding()
         }.navigationBarTitle("Maps")
     }
