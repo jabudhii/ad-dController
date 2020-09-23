@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 func getDayCounterData(withName name: String) -> [Int]?
 {
     if  let path = Bundle.main.path(forResource: name, ofType: "plist"),
