@@ -15,7 +15,7 @@ struct ArmorDetailView: View {
             ForEach(armorList, id: \.name){ armor in
                 VStack{
                     HStack{
-                        Text(armor.name).font(.largeTitle).bold()
+                        Text(armor.name).bold()
                         Spacer()
                     }
                     HStack{

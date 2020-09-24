@@ -8,56 +8,98 @@
 
 import SwiftUI
 
+
+let dropShadow = Color.black.opacity(0.4)
+let dropLight = Color.white
+
 struct CharacterInfoView: View {
     let selectedChar: theCharacter
+    let corna: CGFloat = 25
     var body: some View {
         ScrollView{
             VStack{
-                Group{
-                    HStack{
-                        Text("Name").bold()
-                        Spacer()
-                        Text(selectedChar.name)
-                    }
-                    HStack{
-                        Text("Player").bold()
-                        Spacer()
-                        Text(selectedChar.player)
-                    }
-                    HStack{
-                        Text("Class").bold()
-                        Spacer()
-                        Text(selectedChar.charClass)
-                    }
-                }
-                Spacer()
-                Group{
-                    HStack{
-                        Text("Alive").bold()
-                        Spacer()
-                        Text(String(selectedChar.isAlive))
-                    }
-                    if (!selectedChar.isAlive){
-                        HStack{
-                            Text("Reason For Death").bold()
-                            Spacer()
-                            Text("The Guardians")
-                        }
-                    }
-                    Spacer()
-                    HStack{
-                        Text("Traveler").bold()
-                        Spacer()
-                        Text(String(selectedChar.traveller))
-                    }
-                }
-                Spacer()
                 HStack{
-                    Text("Description").bold()
+                    VStack{
+                        VStack{  // GENERAL
+                            Text("General").font(.largeTitle).bold()
+                            HStack{
+                                VStack{ // Basic INFO
+                                    HStack{
+                                        Text("Name:")
+                                        Text(String(selectedChar.name)).bold()
+                                    }
+                                    HStack{
+                                        Text("Player:")
+                                        Text(String(selectedChar.player)).bold()
+                                    }
+                                }
+                                Spacer()
+                                VStack{ // Basic INFO - Race, Class
+                                    HStack{
+                                        Text("Race:")
+                                        Text(String(selectedChar.race)).bold()
+                                    }
+                                    HStack{
+                                        Text("Class:")
+                                        Text(String(selectedChar.charClass)).bold()
+                                    }
+                                    HStack{
+                                        Text("Level:")
+                                        Text(String(selectedChar.charLev[0])).bold()
+                                    }
+                                }
+                            }
+                        }.padding().background(Color.gray.opacity(0.25)).cornerRadius(corna).shadow(color: dropShadow, radius: 15, x: 10, y: 10)
+                        .shadow(color: dropLight, radius: 15, x: -10, y: -10)  // END GENERAL
+                        Spacer()
+                        
+                        VStack{  // DESCRIPTION
+                            Text("Description").font(.largeTitle).bold()
+                            Text(String(selectedChar.detail)).bold()
+                            Spacer()
+                        }.padding().background(Color.gray.opacity(0.25)).cornerRadius(corna).shadow(color: dropShadow, radius: 15, x: 10, y: 10)
+                        .shadow(color: dropLight, radius: 15, x: -10, y: -10)  // END DESCRIPTION
+                    }
                     Spacer()
-                    Text(selectedChar.detail)
+                    VStack{  // DETAIL
+                        Text("Details").font(.largeTitle).bold()
+                        HStack{
+                            VStack{ // Detail INFO
+                                HStack{
+                                    Text("Alive:")
+                                    Text(String(selectedChar.isAlive)).bold()
+                                }
+                                HStack{
+                                    Text("Traveler:")
+                                    Text(String(selectedChar.traveller)).bold()
+                                }
+                                HStack{
+                                    Text("Crafted:")
+                                    Text(String(selectedChar.crafted)).bold()
+                                }
+                            }
+                            Spacer()
+                            VStack{ // Basic INFO - Race, Class
+                                HStack{
+                                    Text("Note:")
+                                    Text(String(selectedChar.notes)).bold()
+                                }
+                                HStack{
+                                    Text("HP:")
+                                    Text(String(selectedChar.hp[0])).bold()
+                                }
+                                
+                            }
+                        }
+                        Spacer()
+                        
+                    }.padding().background(Color.gray.opacity(0.25)).cornerRadius(corna).shadow(color: dropShadow, radius: 15, x: 10, y: 10)
+                    .shadow(color: dropLight, radius: 15, x: -10, y: -10)  // END DETAIL
                 }
+                
             }.padding()
+            
+            
         }.navigationTitle(selectedChar.name)  // End of ScrollView
     }  // End of Body
 }  // End of Struct

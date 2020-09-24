@@ -15,7 +15,7 @@ struct PotionDetailView: View {
             ForEach(potionList, id: \.name){ potion in
                 VStack{
                     HStack{
-                        Text(potion.name).font(.largeTitle).bold()
+                        Text(potion.name).bold()
                         Spacer()
                     }
                     HStack{

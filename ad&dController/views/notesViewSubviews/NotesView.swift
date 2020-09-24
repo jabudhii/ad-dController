@@ -18,6 +18,9 @@ struct NotesView: View {
                 NavigationLink(destination: NotesTimeKeeperView()){
                     Text("Time Keeper")
                 }
+                NavigationLink(destination: NotesPlayerView()){
+                    Text("Players")
+                }
             }.navigationBarTitle("Notes").listStyle(SidebarListStyle())
         }
     }

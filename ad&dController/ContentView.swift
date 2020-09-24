@@ -10,7 +10,11 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
-    @State private var selection = 3
+    
+    
+
+    
+    @State private var selection = 0
     
     // Core Data for DayKeeper
     @FetchRequest(entity: DayKeeper.entity(), sortDescriptors: []) var dayTracker: FetchedResults<DayKeeper>

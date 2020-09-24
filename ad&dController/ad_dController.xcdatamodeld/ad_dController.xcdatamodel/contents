@@ -32,6 +32,9 @@
         <attribute name="charRace" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="charReasonDeath" optional="YES" attributeType="String"/>
         <attribute name="charThaco" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <relationship name="newRelationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CorePlayers" inverseName="newRelationship" inverseEntity="CorePlayers"/>
+        <relationship name="newRelationship1" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CoreInventory" inverseName="newRelationship" inverseEntity="CoreInventory"/>
     </entity>
     <entity name="CoreInventory" representedClassName="CoreInventory" syncable="YES" codeGenerationType="class">
         <attribute name="bag" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
@@ -43,19 +46,24 @@
         <attribute name="coinPlatinum" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="coinSilver" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="coinSteel" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="owner" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="newRelationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CoreCharacters" inverseName="newRelationship1" inverseEntity="CoreCharacters"/>
     </entity>
     <entity name="CorePlayers" representedClassName="CorePlayers" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="note" optional="YES" attributeType="String"/>
+        <relationship name="newRelationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CoreCharacters" inverseName="newRelationship" inverseEntity="CoreCharacters"/>
     </entity>
     <entity name="DayKeeper" representedClassName="DayKeeper" syncable="YES" codeGenerationType="class">
         <attribute name="daysSinceBarryKill" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
     </entity>
     <elements>
-        <element name="CoreCharacters" positionX="-63" positionY="-18" width="128" height="508"/>
-        <element name="CoreInventory" positionX="-36" positionY="162" width="128" height="193"/>
-        <element name="CorePlayers" positionX="-54" positionY="72" width="128" height="58"/>
-        <element name="DayKeeper" positionX="-45" positionY="135" width="128" height="73"/>
+        <element name="CoreCharacters" positionX="-869.609375" positionY="-386.8046875" width="128" height="553"/>
+        <element name="CoreInventory" positionX="-1053.6328125" positionY="-312.41015625" width="128" height="223"/>
+        <element name="CorePlayers" positionX="-1075.15234375" positionY="3.609375" width="100.1953125" height="103"/>
+        <element name="DayKeeper" positionX="-992.1328125" positionY="290.0703125" width="128" height="73"/>
     </elements>
 </model>

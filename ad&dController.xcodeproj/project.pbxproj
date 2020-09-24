@@ -33,6 +33,8 @@
 		7B61799124D708B000F7F147 /* WeaponDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B61799024D708B000F7F147 /* WeaponDetailView.swift */; };
 		7B63E91E24C77116002CF787 /* WorldTimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B63E91D24C77116002CF787 /* WorldTimelineView.swift */; };
 		7B63E92024C79003002CF787 /* CharacterGenerationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B63E91F24C79003002CF787 /* CharacterGenerationView.swift */; };
+		7B7829B7251CEA1200272C7E /* NotesPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7829B6251CEA1200272C7E /* NotesPlayerView.swift */; };
+		7B7829D1251CED4800272C7E /* CD_PlayerSummonerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7829D0251CED4800272C7E /* CD_PlayerSummonerData.swift */; };
 		7B7990F2251AECDC00006568 /* TimeKeeperData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7990F1251AECDC00006568 /* TimeKeeperData.swift */; };
 		7B799103251AEEF500006568 /* dayCounterData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7B799102251AEEF500006568 /* dayCounterData.plist */; };
 		7B8ACE4F24C6099600164DDE /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8ACE4E24C6099600164DDE /* NotesView.swift */; };
@@ -98,6 +100,8 @@
 		7B61799024D708B000F7F147 /* WeaponDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponDetailView.swift; sourceTree = "<group>"; };
 		7B63E91D24C77116002CF787 /* WorldTimelineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldTimelineView.swift; sourceTree = "<group>"; };
 		7B63E91F24C79003002CF787 /* CharacterGenerationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterGenerationView.swift; sourceTree = "<group>"; };
+		7B7829B6251CEA1200272C7E /* NotesPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesPlayerView.swift; sourceTree = "<group>"; };
+		7B7829D0251CED4800272C7E /* CD_PlayerSummonerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CD_PlayerSummonerData.swift; sourceTree = "<group>"; };
 		7B7990F1251AECDC00006568 /* TimeKeeperData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TimeKeeperData.swift; path = views/notesViewSubviews/TimeKeeperData.swift; sourceTree = "<group>"; };
 		7B799102251AEEF500006568 /* dayCounterData.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = dayCounterData.plist; sourceTree = "<group>"; };
 		7B8ACE4E24C6099600164DDE /* NotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesView.swift; sourceTree = "<group>"; };
@@ -243,6 +247,7 @@
 				7B53CEDB2465B29600EF2176 /* Enemies.swift */,
 				7B53CEDD2465B2A100EF2176 /* Weapons.swift */,
 				7B53CEDF2465B71100EF2176 /* Items.swift */,
+				7B7829D0251CED4800272C7E /* CD_PlayerSummonerData.swift */,
 				7B93085B251B97D20094A537 /* NameArrayData.swift */,
 				7B7990F1251AECDC00006568 /* TimeKeeperData.swift */,
 			);
@@ -268,6 +273,7 @@
 			isa = PBXGroup;
 			children = (
 				7B8ACE4E24C6099600164DDE /* NotesView.swift */,
+				7B7829B6251CEA1200272C7E /* NotesPlayerView.swift */,
 				7B8F91D62519311D00F2D6D8 /* NotesTimeKeeperView.swift */,
 				7B8F91D12519311400F2D6D8 /* NotesGeneralView.swift */,
 			);
@@ -456,6 +462,7 @@
 				7B63E92024C79003002CF787 /* CharacterGenerationView.swift in Sources */,
 				7B5D2D9C246998FE0051B584 /* CharacterView.swift in Sources */,
 				7B61798D24D7072600F7F147 /* ItemsDetailView.swift in Sources */,
+				7B7829B7251CEA1200272C7E /* NotesPlayerView.swift in Sources */,
 				7B51385724C74E3700C14BEB /* CharacterMainListRows.swift in Sources */,
 				7B53CEAC2465AFDC00EF2176 /* ad_dController.xcdatamodeld in Sources */,
 				7B53CEDE2465B2A100EF2176 /* Weapons.swift in Sources */,
@@ -465,6 +472,7 @@
 				7B5D2D9A246995EF0051B584 /* CombatView.swift in Sources */,
 				7B53CEDC2465B29600EF2176 /* Enemies.swift in Sources */,
 				7B5B350D246D024B007D8879 /* Combat.swift in Sources */,
+				7B7829D1251CED4800272C7E /* CD_PlayerSummonerData.swift in Sources */,
 				7B8F920025193E1800F2D6D8 /* PotionDetailView.swift in Sources */,
 				7BEAC69524D66A8D00827372 /* EnemyMainView.swift in Sources */,
 				7B53CEDA2465B28D00EF2176 /* Characters.swift in Sources */,
@@ -637,7 +645,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "ad&dController/ad&dController.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 646;
+				CURRENT_PROJECT_VERSION = 697;
 				DEVELOPMENT_ASSET_PATHS = "\"ad&dController/Preview Content\"";
 				DEVELOPMENT_TEAM = DY4U4E2DGY;
 				ENABLE_PREVIEWS = YES;
@@ -662,7 +670,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "ad&dController/ad&dController.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 646;
+				CURRENT_PROJECT_VERSION = 697;
 				DEVELOPMENT_ASSET_PATHS = "\"ad&dController/Preview Content\"";
 				DEVELOPMENT_TEAM = DY4U4E2DGY;
 				ENABLE_PREVIEWS = YES;
