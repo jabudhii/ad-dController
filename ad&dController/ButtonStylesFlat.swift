@@ -8,7 +8,12 @@
 
 import SwiftUI
 
+
 struct ButtonStylesFlat: View {
+    
+
+    
+    
     var option: String
     var body: some View {
         switch(option){

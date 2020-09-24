@@ -14,93 +14,83 @@ let dropLight = Color.white
 
 struct CharacterInfoView: View {
     let selectedChar: theCharacter
-    let corna: CGFloat = 25
+
+    
+    
     var body: some View {
-        ScrollView{
-            VStack{
+
+        
+            ZStack{
+                mainBackgroundColor
+                
                 HStack{
-                    VStack{
-                        VStack{  // GENERAL
-                            Text("General").font(.largeTitle).bold()
-                            HStack{
-                                VStack{ // Basic INFO
-                                    HStack{
-                                        Text("Name:")
-                                        Text(String(selectedChar.name)).bold()
-                                    }
-                                    HStack{
-                                        Text("Player:")
-                                        Text(String(selectedChar.player)).bold()
-                                    }
-                                }
-                                Spacer()
-                                VStack{ // Basic INFO - Race, Class
-                                    HStack{
-                                        Text("Race:")
-                                        Text(String(selectedChar.race)).bold()
-                                    }
-                                    HStack{
-                                        Text("Class:")
-                                        Text(String(selectedChar.charClass)).bold()
-                                    }
-                                    HStack{
-                                        Text("Level:")
-                                        Text(String(selectedChar.charLev[0])).bold()
-                                    }
-                                }
-                            }
-                        }.padding().background(Color.gray.opacity(0.25)).cornerRadius(corna).shadow(color: dropShadow, radius: 15, x: 10, y: 10)
-                        .shadow(color: dropLight, radius: 15, x: -10, y: -10)  // END GENERAL
+                    VStack{  // LEFT SIDE -------------------------------------------------------------------
+                        CharInfoCardModel(char: selectedChar,option: "general").padding()
                         Spacer()
+                        CharInfoCardModel(char: selectedChar,option: "desc").padding()
                         
-                        VStack{  // DESCRIPTION
-                            Text("Description").font(.largeTitle).bold()
-                            Text(String(selectedChar.detail)).bold()
-                            Spacer()
-                        }.padding().background(Color.gray.opacity(0.25)).cornerRadius(corna).shadow(color: dropShadow, radius: 15, x: 10, y: 10)
-                        .shadow(color: dropLight, radius: 15, x: -10, y: -10)  // END DESCRIPTION
-                    }
-                    Spacer()
-                    VStack{  // DETAIL
-                        Text("Details").font(.largeTitle).bold()
-                        HStack{
-                            VStack{ // Detail INFO
-                                HStack{
-                                    Text("Alive:")
-                                    Text(String(selectedChar.isAlive)).bold()
-                                }
-                                HStack{
-                                    Text("Traveler:")
-                                    Text(String(selectedChar.traveller)).bold()
-                                }
-                                HStack{
-                                    Text("Crafted:")
-                                    Text(String(selectedChar.crafted)).bold()
-                                }
-                            }
-                            Spacer()
-                            VStack{ // Basic INFO - Race, Class
-                                HStack{
-                                    Text("Note:")
-                                    Text(String(selectedChar.notes)).bold()
-                                }
-                                HStack{
-                                    Text("HP:")
-                                    Text(String(selectedChar.hp[0])).bold()
-                                }
+                        VStack{
+                            HStack{  // TOP
+                                Button(action:{
+                                    // Action
+                                    print("1")
+                                })
+                                {
+                                // Appearance
+                                    HStack{
+                                        Image(systemName: "arrow.up.circle.fill")
+                                        Text("View More")
+                                    }
+                                }.buttonStyle(NeuButtonStyle()).padding()  // END BUTTON
                                 
-                            }
-                        }
-                        Spacer()
+                                Button(action:{
+                                    // Action
+                                    print("2")
+                                })
+                                {
+                                // Appearance
+                                    HStack{
+                                        Image(systemName: "pencil.circle.fill")
+                                        Text("Edit")
+                                    }
+                                }.buttonStyle(NeuButtonStyle()).padding()  // END BUTTON
+                                
+                            }.padding()
+                            HStack{  // BOTTOM
+                                Button(action:{
+                                    // Action
+                                    print("3")
+                                })
+                                {
+                                // Appearance
+                                    HStack{
+                                        Image(systemName: "clock.fill")
+                                        Text("History")
+                                    }
+                                }.buttonStyle(NeuButtonStyle()).padding()  // END BUTTON
+                                
+                                Button(action:{
+                                    // Action
+                                    print("4")
+                                })
+                                {
+                                // Appearance
+                                    HStack{
+                                        Image(systemName: "x.circle.fill")
+                                        Text("Delete")
+                                    }
+                                }.buttonStyle(NeuButtonStyle()).padding()  // END BUTTON
+                            }.padding()
+                        }.padding()  // END BUTTON GROUP
                         
-                    }.padding().background(Color.gray.opacity(0.25)).cornerRadius(corna).shadow(color: dropShadow, radius: 15, x: 10, y: 10)
-                    .shadow(color: dropLight, radius: 15, x: -10, y: -10)  // END DETAIL
+                        
+                    }  // END OF LEFT SIDE
+                    Spacer()
+                    CharInfoCardModel(char: selectedChar,option: "detail").padding()
+                    
                 }
                 
-            }.padding()
-            
-            
-        }.navigationTitle(selectedChar.name)  // End of ScrollView
+            }.padding().background(mainBackgroundColor)  // End ZStack MAIN
     }  // End of Body
 }  // End of Struct
 

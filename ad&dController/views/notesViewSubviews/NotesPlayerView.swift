@@ -64,11 +64,17 @@ struct NotesPlayerView: View {
                             Text((thisPlayer as? CorePlayers)?.note ?? "Error")
                         }.buttonStyle(PlainButtonStyle()).sheet(isPresented: self.$showSheet, content: {
                             VStack{
-                                TextField("Update Name", text: $newPlayerName).padding().background(Color.white).border(Color.black, width: 4).cornerRadius(5).foregroundColor(.black)
-                                TextField("Update Notes", text: $newPlayerNote).padding().background(Color.white).border(Color.black, width: 4).cornerRadius(5).foregroundColor(.black)
+                                HStack{
+                                    Text("Update Name:")
+                                    TextField("Name", text: $newPlayerName)
+                                }.padding().background(Color.white).border(Color.black, width: 4).cornerRadius(5).foregroundColor(.black)
+                                HStack{
+                                    Text("Update Note:")
+                                    TextField("Name", text: $newPlayerNote)
+                                }.padding().background(Color.white).border(Color.black, width: 4).cornerRadius(5).foregroundColor(.black)
                                 Spacer()
                                 Text("Warning:").bold()
-                                Text("This will delete, alter, or otherwise modify the data stored in this application.\nPlease ensure you have properly considered the results of the changes you are performing before selecting any button.").multilineTextAlignment(.center)
+                                Text("This will delete, alter, or otherwise modify the data stored in this application.\n\nPlease ensure you have properly considered the results of the changes you are performing before selecting any button.").multilineTextAlignment(.center)
                                 Spacer()
                                 HStack{
                                     Button(action:{
@@ -101,7 +107,7 @@ struct NotesPlayerView: View {
                             }.padding()  // END VSTACK
                         })
                     }  // END FOR EACH
-                }.navigationTitle("Players").padding().background(Color.gray).cornerRadius(25)  // END SCROLL
+                }.navigationTitle("Players").padding().background(Color.gray).cornerRadius(corna)  // END SCROLL
             }
         }.padding().onAppear(){self.loadPlayers()}
     }  // END BODY
