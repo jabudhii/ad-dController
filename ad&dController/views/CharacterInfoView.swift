@@ -51,7 +51,7 @@ struct CharacterInfoView: View {
                                 // Appearance
                                     HStack{
                                         Image(systemName: "pencil.circle.fill")
-                                        Text("Edit")
+                                        Text("Editor")
                                     }
                                 }.buttonStyle(NeuButtonStyle()).padding()  // END BUTTON
                                 

@@ -21,6 +21,11 @@ struct NotesView: View {
                 NavigationLink(destination: NotesPlayerView()){
                     Text("Players")
                 }
+                if(experimental){
+                    NavigationLink(destination: ExDataView()){
+                        Text("Data")
+                    }
+                }
             }.navigationBarTitle("Notes").listStyle(SidebarListStyle())
         }
     }

@@ -10,31 +10,40 @@ import SwiftUI
 
 struct WorldKrisselMapImageView: View {
     let corna: CGFloat = 25
+    
+    let krisselLabels: [String] = ["Krissel Region Map", "World Map", "RiverGuard Midway"]
+    let krisselImages = [Image("KrisselRegion"), Image("KorrodanWorldMap"), Image("RiverGuard_Midway")]
+    
+    
     var body: some View {
-        ScrollView{
-            VStack{
-                Text("Krissel Region Map")
-                Image("KrisselRegion").resizable().aspectRatio(contentMode: .fit).cornerRadius(corna)
-                    .overlay(RoundedRectangle(cornerRadius: corna)
-                                .stroke(Color.black, lineWidth: 4))
-                    .shadow(color: dropShadow, radius: 15, x: 10, y: 10)
-                    .shadow(color: dropLight, radius: 15, x: -10, y: -10)
-                Divider()
-                Text("World Map")
-                Image("KorrodanWorldMap").resizable().aspectRatio(contentMode: .fit).cornerRadius(corna)
-                    .overlay(RoundedRectangle(cornerRadius: corna)
-                                .stroke(Color.black, lineWidth: 4))
-                    .shadow(color: dropShadow, radius: 15, x: 10, y: 10)
-                    .shadow(color: dropLight, radius: 15, x: -10, y: -10)
-                Divider()
-                Text("RiverGuard Midway")
-                Image("RiverGuard_Midway").resizable().aspectRatio(contentMode: .fit).cornerRadius(corna)
-                    .overlay(RoundedRectangle(cornerRadius: corna)
-                                .stroke(Color.black, lineWidth: 4))
-                    .shadow(color: dropShadow, radius: 15, x: 10, y: 10)
-                    .shadow(color: dropLight, radius: 15, x: -10, y: -10)
-            }.padding()
-        }.navigationBarTitle("Maps")
+        ZStack{
+            mainBackgroundColor
+            ScrollView{
+                VStack{
+                    
+                    ForEach(0 ..< krisselLabels.count){ item in
+                        VStack{
+                            Text(krisselLabels[item]).foregroundColor(mainForegroundColor).padding()
+                            ZStack{
+                                mainBackgroundColor
+                                krisselImages[item].resizable().aspectRatio(contentMode: .fit)
+                                    
+                            }
+                            .cornerRadius(corna)
+                            .overlay(RoundedRectangle(cornerRadius: corna).stroke(mainBackgroundColor, lineWidth: 16))
+                            .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
+                            .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
+                            .padding()
+                        }
+                    }
+                    
+                    
+                    
+                    
+                }.padding()
+            }.navigationBarTitle("Maps")
+        }
+        
     }
 }
 

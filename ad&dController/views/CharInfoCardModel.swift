@@ -20,7 +20,7 @@ struct CharInfoCardModel: View {
         let descriptionLabel: [String] = ["Description:"]
         let descriptionData: [String] = [String(char.detail)]
         
-        let detailLabel: [String] = ["Traveler", "Crafted:", "Alive:", "Race:", "Class:", "HP", "THAC0:", "AC:"]
+        let detailLabel: [String] = ["Traveler:", "Crafted:", "Alive:", "Race:", "Class:", "HP:", "THAC0:", "AC:"]
         let detailData: [String] = [String(char.traveller),String(char.crafted),String(char.isAlive),String(char.race
         ),String(char.charClass),String(char.hp[0]),String(char.thacAc[0]),String(char.thacAc[1])]
         
@@ -33,14 +33,24 @@ struct CharInfoCardModel: View {
             ZStack{  // RIGHT SIDE ------------------------------------------------------------------
                 mainBackgroundColor
                 VStack{  // DETAIL
-                    Text("Details").font(.largeTitle).bold()
+                    Text("Details").font(.largeTitle).bold().background(mainBackgroundColor)
                     ScrollView{
                         ForEach (0 ..< detailLabel.count){ item in
                             Divider().foregroundColor(mainForegroundColor)
                             HStack{
                                 Text(detailLabel[item]).bold()
                                 Spacer()
-                                Text(detailData[item])
+                                switch(item){
+                                case (0):
+                                    determineOutput(option: item, dataArray:detailData, color: Color.purple)
+                                case (1):
+                                    determineOutput(option: item, dataArray:detailData, color: Color.red)
+                                case (2):
+                                    determineOutput(option: item, dataArray:detailData, color: Color.blue)
+                                default:
+                                    Text(detailData[item])
+                                }
+                                
                             }
                         }
                     }.padding()
@@ -114,6 +124,30 @@ struct CharInfoCardModel: View {
             .shadow(color: Color.white.opacity(0.7), radius: cardCorna, x: -5, y: -5)  // END DETAIL  -- EXPERIMENTAL RIGHT SIDE
         }
     }
+    
+    
+    func determineOutput(option: Int, dataArray: [String], color: Color) -> some View{
+        let selection: Int = option
+        
+        if(dataArray[selection] == "true"){
+            return
+                Circle()
+                    .fill(color)
+                    .shadow(color: Color.black.opacity(0.2), radius: cardCorna, x: 10, y: 10)
+                    .shadow(color: Color.white.opacity(0.7), radius: cardCorna, x: -5, y: -5)
+        }else{
+            return
+                Circle()
+                    .fill(mainForegroundColor)
+                    .shadow(color: Color.black.opacity(0.2), radius: cardCorna, x: 10, y: 10)
+                    .shadow(color: Color.white.opacity(0.7), radius: cardCorna, x: -5, y: -5)
+        }
+        
+        
+        
+    }
+    
+    
 }
 
 struct CharInfoCardModel_Previews: PreviewProvider {

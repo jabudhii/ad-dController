@@ -82,9 +82,11 @@ struct NotesPlayerView: View {
                                             
                                         }  // END NOT GOOD
                                         else{
-                                            self.addNewPlayer()
+                                            self.updatePlayerName(currentPlayerName: (thisPlayer as? CorePlayers)?.name ?? "Error", newPlayerName: self.newPlayerName)
+                                            self.updatePlayerNote(currentPlayerNote: (thisPlayer as? CorePlayers)?.note ?? "Error", newPlayerNote: self.newPlayerNote)
                                             self.newPlayerName = ""
                                             self.newPlayerNote = ""
+                                            self.loadPlayers()
                                         }  // END GOOD
                                     }){
                                         ButtonStylesFlat(option: "write")
@@ -106,6 +108,7 @@ struct NotesPlayerView: View {
                                 }  // END HSTACK
                             }.padding()  // END VSTACK
                         })
+                        Divider()
                     }  // END FOR EACH
                 }.navigationTitle("Players").padding().background(Color.gray).cornerRadius(corna)  // END SCROLL
             }
@@ -173,7 +176,7 @@ struct NotesPlayerView: View {
             let fetchReturn = try managedContext.fetch(fetchRequest)
             
             let objectUpdate = fetchReturn[0] as! NSManagedObject
-            objectUpdate.setValue(newPlayerName, forKey: "name")
+            objectUpdate.setValue(self.newPlayerName, forKey: "name")
             do {
                 try managedContext.save()
                 print("updated successfully")
@@ -206,7 +209,7 @@ struct NotesPlayerView: View {
             let fetchReturn = try managedContext.fetch(fetchRequest)
             
             let objectUpdate = fetchReturn[0] as! NSManagedObject
-            objectUpdate.setValue(newPlayerNote, forKey: "note")
+            objectUpdate.setValue(self.newPlayerNote, forKey: "note")
             do {
                 try managedContext.save()
                 print("updated successfully")

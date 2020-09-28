@@ -8,6 +8,20 @@
 
 import SwiftUI
 import CoreData
+
+
+extension Bundle {
+    var releaseVersionNumber: String? {
+        return infoDictionary?["CFBundleShortVersionString"] as? String
+    }
+    var buildVersionNumber: String? {
+        return infoDictionary?["CFBundleVersion"] as? String
+    }
+}
+
+
+let experimental: Bool = true
+
 let corna: CGFloat = 25
 let cardCorna: CGFloat = 10
 let darkBackgroundColor = LinearGradient(Color.darkStart, Color.darkEnd)

@@ -45,8 +45,9 @@
 		7B8F91D72519311D00F2D6D8 /* NotesTimeKeeperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8F91D62519311D00F2D6D8 /* NotesTimeKeeperView.swift */; };
 		7B8F920025193E1800F2D6D8 /* PotionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8F91FF25193E1800F2D6D8 /* PotionDetailView.swift */; };
 		7B8F920E2519456000F2D6D8 /* ProvisionsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8F920D2519456000F2D6D8 /* ProvisionsDetailView.swift */; };
-		7B93085C251B97D20094A537 /* NameArrayData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B93085B251B97D20094A537 /* NameArrayData.swift */; };
 		7B93087C251BA1710094A537 /* CharacterInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B93087B251BA1710094A537 /* CharacterInfoView.swift */; };
+		7BA791B52520EB4700D34785 /* firstNameList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7BA791B42520EB4700D34785 /* firstNameList.plist */; };
+		7BA791C02520ECA900D34785 /* ExDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA791BF2520ECA900D34785 /* ExDataView.swift */; };
 		7BEAC69024D6632300827372 /* WorldMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEAC68F24D6632300827372 /* WorldMainView.swift */; };
 		7BEAC69224D663D200827372 /* WorldKrisselMapImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEAC69124D663D200827372 /* WorldKrisselMapImageView.swift */; };
 		7BEAC69524D66A8D00827372 /* EnemyMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEAC69424D66A8D00827372 /* EnemyMainView.swift */; };
@@ -115,8 +116,9 @@
 		7B8F91D62519311D00F2D6D8 /* NotesTimeKeeperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTimeKeeperView.swift; sourceTree = "<group>"; };
 		7B8F91FF25193E1800F2D6D8 /* PotionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PotionDetailView.swift; sourceTree = "<group>"; };
 		7B8F920D2519456000F2D6D8 /* ProvisionsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvisionsDetailView.swift; sourceTree = "<group>"; };
-		7B93085B251B97D20094A537 /* NameArrayData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameArrayData.swift; sourceTree = "<group>"; };
 		7B93087B251BA1710094A537 /* CharacterInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterInfoView.swift; sourceTree = "<group>"; };
+		7BA791B42520EB4700D34785 /* firstNameList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = firstNameList.plist; sourceTree = "<group>"; };
+		7BA791BF2520ECA900D34785 /* ExDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExDataView.swift; sourceTree = "<group>"; };
 		7BEAC68F24D6632300827372 /* WorldMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldMainView.swift; sourceTree = "<group>"; };
 		7BEAC69124D663D200827372 /* WorldKrisselMapImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldKrisselMapImageView.swift; sourceTree = "<group>"; };
 		7BEAC69424D66A8D00827372 /* EnemyMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnemyMainView.swift; sourceTree = "<group>"; };
@@ -257,7 +259,6 @@
 				7B7829D0251CED4800272C7E /* CD_PlayerSummonerData.swift */,
 				7B782A2F251D0F4100272C7E /* ButtonStylesFlat.swift */,
 				7B782AA3251D26C900272C7E /* NeuButtonStyle.swift */,
-				7B93085B251B97D20094A537 /* NameArrayData.swift */,
 				7B7990F1251AECDC00006568 /* TimeKeeperData.swift */,
 			);
 			name = dataFiles;
@@ -266,6 +267,7 @@
 		7B8ACE5324C613A100164DDE /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				7BA791B42520EB4700D34785 /* firstNameList.plist */,
 				7B53CEA62465AFDC00EF2176 /* AppDelegate.swift */,
 				7B53CEA82465AFDC00EF2176 /* SceneDelegate.swift */,
 				7B53CEAD2465AFDC00EF2176 /* ContentView.swift */,
@@ -283,6 +285,7 @@
 			children = (
 				7B8ACE4E24C6099600164DDE /* NotesView.swift */,
 				7B7829B6251CEA1200272C7E /* NotesPlayerView.swift */,
+				7BA791BF2520ECA900D34785 /* ExDataView.swift */,
 				7B8F91D62519311D00F2D6D8 /* NotesTimeKeeperView.swift */,
 				7B8F91D12519311400F2D6D8 /* NotesGeneralView.swift */,
 			);
@@ -404,6 +407,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BA791B52520EB4700D34785 /* firstNameList.plist in Resources */,
 				7B53CEB62465AFDF00EF2176 /* LaunchScreen.storyboard in Resources */,
 				7B53CEB32465AFDF00EF2176 /* Preview Assets.xcassets in Resources */,
 				7B799103251AEEF500006568 /* dayCounterData.plist in Resources */,
@@ -453,7 +457,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B53CEE02465B71100EF2176 /* Items.swift in Sources */,
-				7B93085C251B97D20094A537 /* NameArrayData.swift in Sources */,
 				7B782AC7251D2EA300272C7E /* CharInfoCardModel.swift in Sources */,
 				7B8F91D22519311400F2D6D8 /* NotesGeneralView.swift in Sources */,
 				7BEAC69024D6632300827372 /* WorldMainView.swift in Sources */,
@@ -472,6 +475,7 @@
 				7B63E92024C79003002CF787 /* CharacterGenerationView.swift in Sources */,
 				7B5D2D9C246998FE0051B584 /* CharacterView.swift in Sources */,
 				7B61798D24D7072600F7F147 /* ItemsDetailView.swift in Sources */,
+				7BA791C02520ECA900D34785 /* ExDataView.swift in Sources */,
 				7B7829B7251CEA1200272C7E /* NotesPlayerView.swift in Sources */,
 				7B51385724C74E3700C14BEB /* CharacterMainListRows.swift in Sources */,
 				7B53CEAC2465AFDC00EF2176 /* ad_dController.xcdatamodeld in Sources */,
@@ -657,7 +661,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "ad&dController/ad&dController.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 812;
+				CURRENT_PROJECT_VERSION = 871;
 				DEVELOPMENT_ASSET_PATHS = "\"ad&dController/Preview Content\"";
 				DEVELOPMENT_TEAM = DY4U4E2DGY;
 				ENABLE_PREVIEWS = YES;
@@ -682,7 +686,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "ad&dController/ad&dController.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 812;
+				CURRENT_PROJECT_VERSION = 871;
 				DEVELOPMENT_ASSET_PATHS = "\"ad&dController/Preview Content\"";
 				DEVELOPMENT_TEAM = DY4U4E2DGY;
 				ENABLE_PREVIEWS = YES;

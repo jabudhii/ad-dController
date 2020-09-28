@@ -19,7 +19,7 @@ func getDayCounterData(withName name: String) -> [Int]?
     return nil
 }
 
-var dayCounterMaster = getDayCounterData(withName: "dayCounterData")
+let dayCounterMaster = getDayCounterData(withName: "dayCounterData")
 // 0-barryDeath, 1-totalGameDays, 2-daysBeforeSplit, 3-daysBeforeWorldCover, 4-daysBeforeAbyss
 
 
@@ -31,3 +31,15 @@ let daysInMonth: Int = daysInYear / monthsInYear
 
 
 
+func getFirstNameData(withName name: String) -> [String]?
+{
+    if  let path = Bundle.main.path(forResource: name, ofType: "plist"),
+        let xml = FileManager.default.contents(atPath: path)
+    {
+        return (try? PropertyListSerialization.propertyList(from: xml, options: .mutableContainersAndLeaves, format: nil)) as? [String]
+    }
+
+    return nil
+}
+
+let firstNameArray = getFirstNameData(withName: "firstNameList")
