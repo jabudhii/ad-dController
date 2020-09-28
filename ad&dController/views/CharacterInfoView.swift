@@ -21,7 +21,7 @@ struct CharacterInfoView: View {
 
         
             ZStack{
-                mainBackgroundColor
+                mainBackgroundColor.edgesIgnoringSafeArea(.all)
                 
                 HStack{
                     VStack{  // LEFT SIDE -------------------------------------------------------------------
@@ -90,7 +90,7 @@ struct CharacterInfoView: View {
                     
                 }
                 
-            }.padding().background(mainBackgroundColor)  // End ZStack MAIN
+            }.padding().background(mainBackgroundColor.edgesIgnoringSafeArea(.all))  // End ZStack MAIN
     }  // End of Body
 }  // End of Struct
 

@@ -17,7 +17,7 @@ struct WorldKrisselMapImageView: View {
     
     var body: some View {
         ZStack{
-            mainBackgroundColor
+            mainBackgroundColor.edgesIgnoringSafeArea(.all)
             ScrollView{
                 VStack{
                     
@@ -41,7 +41,7 @@ struct WorldKrisselMapImageView: View {
                     
                     
                 }.padding()
-            }.navigationBarTitle("Maps")
+            }
         }
         
     }

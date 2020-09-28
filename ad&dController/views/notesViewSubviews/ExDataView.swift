@@ -11,7 +11,7 @@ import SwiftUI
 struct ExDataView: View {
     var body: some View {
         ZStack{
-            mainBackgroundColor
+            mainBackgroundColor.edgesIgnoringSafeArea(.all)
             
             
             HStack{  // MAIN HSTACK
@@ -91,7 +91,7 @@ struct ExDataView: View {
             
             
             
-        }.padding().background(mainBackgroundColor)  // End Main ZStack
+        }.padding().background(mainBackgroundColor.edgesIgnoringSafeArea(.all))  // End Main ZStack
         
         
         

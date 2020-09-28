@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 func getDayCounterData(withName name: String) -> [Int]?
 {
@@ -23,7 +24,7 @@ let dayCounterMaster = getDayCounterData(withName: "dayCounterData")
 // 0-barryDeath, 1-totalGameDays, 2-daysBeforeSplit, 3-daysBeforeWorldCover, 4-daysBeforeAbyss
 
 
-let dayCounterText = ["Days since Barry was killed.", "Days since the Main Party first met.", "Days until the inner sphere seperates.", "Days until the anomaly storm covers the world.", "Days until the tear to another plane."]
+let dayCounterText = ["Since Barry Death.", "Since First Met.", "Until Seperate.", "Until World Cover.", "Until Tear."]
 
 let daysInYear: Int = 300
 let monthsInYear = 10
@@ -43,3 +44,4 @@ func getFirstNameData(withName name: String) -> [String]?
 }
 
 let firstNameArray = getFirstNameData(withName: "firstNameList")
+
