@@ -24,7 +24,7 @@ struct NeuButtonStyle: ButtonStyle {
                                     .mask(RoundedRectangle(cornerRadius: corna).fill(LinearGradient(Color.black,Color.clear)))
                             )
                             .overlay(
-                                RoundedRectangle(cornerRadius: corna).stroke(Color.white, lineWidth: 8).blur(radius: 4).offset(x: -2, y: -2)
+                                RoundedRectangle(cornerRadius: corna).stroke(Color.white, lineWidth: 3).blur(radius: 4).offset(x: -2, y: -2)
                                     .mask(RoundedRectangle(cornerRadius: corna).fill(LinearGradient(Color.clear,Color.black)))
                             )
                             

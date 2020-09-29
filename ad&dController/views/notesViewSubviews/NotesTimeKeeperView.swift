@@ -7,10 +7,13 @@
 //
 
 import SwiftUI
+import CoreData
 
 let maxValues: [Int] = [0,1200,900,1200,700]
 
 struct NotesTimeKeeperView: View {
+    @State var timeManager:[NSManagedObject] = []
+    @State var currenter: Int = 0
     @State var totalTimeProgress: Float = getCounterMasterData(index: 1, maxValue: maxValues[1])
     @State var planeSplitProgress: Float = getCounterMasterData(index: 1, maxValue: maxValues[2])
     @State var worldCoverProgress: Float = getCounterMasterData(index: 1, maxValue: maxValues[3])
@@ -82,14 +85,24 @@ struct NotesTimeKeeperView: View {
                     Spacer()
                     Button(action:{
                         //Add stuff here
+                        
                     }){HStack{Image(systemName: "plus.circle.fill");Text("Increment Day")}}.buttonStyle(NeuButtonStyle())
                 }.padding()
             }.padding()// END MAIN VSTACK
             
-        }.foregroundColor(mainForegroundColor)
+        }.foregroundColor(mainForegroundColor).onAppear(){/* Load on Appear*/}
         
         
     }  // End of body
+    
+    
+    
+
+
+    
+    
+    
+    
 }  // End of struct
 
 
@@ -122,6 +135,12 @@ struct NotesTimeKeeperView_Previews: PreviewProvider {
         NotesTimeKeeperView()
     }
 }
+
+
+
+
+
+
 
 
 

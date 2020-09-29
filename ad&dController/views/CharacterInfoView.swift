@@ -34,6 +34,7 @@ struct CharacterInfoView: View {
                                 Button(action:{
                                     // Action
                                     print("1")
+                                    
                                 })
                                 {
                                 // Appearance
@@ -46,6 +47,7 @@ struct CharacterInfoView: View {
                                 Button(action:{
                                     // Action
                                     print("2")
+                                    
                                 })
                                 {
                                 // Appearance
@@ -60,6 +62,7 @@ struct CharacterInfoView: View {
                                 Button(action:{
                                     // Action
                                     print("3")
+                                    
                                 })
                                 {
                                 // Appearance
@@ -72,6 +75,7 @@ struct CharacterInfoView: View {
                                 Button(action:{
                                     // Action
                                     print("4")
+                                    
                                 })
                                 {
                                 // Appearance

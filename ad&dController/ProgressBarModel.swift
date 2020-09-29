@@ -22,13 +22,33 @@ struct ProgressBarModel: View {
                 .stroke(lineWidth: 20.0)
                 .foregroundColor(mainBackgroundColor)
             
+            
             Circle()
                 .trim(from: 0.0, to: CGFloat(min(self.progress, 1.0)))
                 .stroke(style: StrokeStyle(lineWidth: 10.0, lineCap: .round, lineJoin: .round))
-                .opacity(0.5)
+                .blur(radius: 2)
+                
+                //.shadow(color: setInteriorColor.opacity(0.4), radius: 3, x: 2, y: 2)
+                //.shadow(color: Color.white.opacity(0.5), radius: 3, x: -1, y: -1)
                 .foregroundColor(setInteriorColor)
                 .rotationEffect(Angle(degrees: 270.0))
                 .animation(.linear)
+                .opacity(0.9)
+                .shadow(color: Color.black.opacity(0.04), radius: 4, x: 5, y: 5)
+            
+            
+            
+            Circle()
+                .trim(from: 0.0, to: CGFloat(min(self.progress, 1.0)))
+                .stroke(style: StrokeStyle(lineWidth: 10.0, lineCap: .round, lineJoin: .round))
+                .opacity(0.45)
+                //.shadow(color: setInteriorColor.opacity(0.4), radius: 3, x: 2, y: 2)
+                //.shadow(color: Color.white.opacity(0.5), radius: 3, x: -1, y: -1)
+                .foregroundColor(setInteriorColor)
+                .rotationEffect(Angle(degrees: 270.0))
+                .animation(.linear)
+                .shadow(color: Color.black.opacity(0.1), radius: 4, x: 5, y: 5)
+            
             
             
             

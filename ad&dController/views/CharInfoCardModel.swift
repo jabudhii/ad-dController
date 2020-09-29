@@ -39,18 +39,17 @@ struct CharInfoCardModel: View {
                             Divider().foregroundColor(mainForegroundColor)
                             HStack{
                                 Text(detailLabel[item]).bold()
-                                //Spacer()
+                                Spacer()
                                 switch(item){
                                 case (0):
-                                    determineOutput(option: item, dataArray:detailData, color: Color.purple)
+                                    determineOutput(option: item, dataArray:detailData, color: Color.purple, labelArray: detailLabel)
                                 case (1):
-                                    determineOutput(option: item, dataArray:detailData, color: Color.green)
+                                    determineOutput(option: item, dataArray:detailData, color: Color.green, labelArray: detailLabel)
                                 case (2):
-                                    determineOutput(option: item, dataArray:detailData, color: Color.blue)
+                                    determineOutput(option: item, dataArray:detailData, color: Color.blue, labelArray: detailLabel)
                                 default:
                                     Spacer()
-                                    Text(detailData[item])
-                                    Spacer()
+                                    Text(detailData[item]).padding()
                                 }
                                 
                             }
@@ -128,24 +127,29 @@ struct CharInfoCardModel: View {
     }
     
     
-    func determineOutput(option: Int, dataArray: [String], color: Color) -> some View{
+    func determineOutput(option: Int, dataArray: [String], color: Color, labelArray: [String]) -> some View{
         let setColor: Color
         
         if(dataArray[option] == "true"){
             setColor = color
         }
         else{
-            setColor = mainForegroundColor
-        }
-           return
-            ZStack{
-            mainBackgroundColor
+            if(labelArray[option] == "Alive:"){
+                setColor = Color.red
+            }
+            else{
+                setColor = mainForegroundColor
+            }
             
-                VStack{
-                    Text(dataArray[option]).foregroundColor(setColor)
-                }
-        }.cornerRadius(corna).padding().shadow(color: Color.black.opacity(0.2), radius: cardCorna, x: 10, y: 10)
-            .shadow(color: Color.white.opacity(0.7), radius: cardCorna, x: -5, y: -5)
+        }
+        if(setColor != mainForegroundColor){
+            return Image(systemName: "circle.fill").foregroundColor(setColor).overlay(Circle().fill(setColor).blur(radius: 2)).padding()
+        }
+        else{
+            return Image(systemName: "circle.fill").foregroundColor(setColor).overlay(Circle().fill(setColor).blur(radius: 0)).padding()
+        }
+        
+            
         
         
         
